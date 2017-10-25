@@ -1,0 +1,22 @@
+{
+  "name": "burger",
+  "description": "loftschool project",
+  "main": "index.js",
+  "authors": [
+    "dragin"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*"
+  }
+}

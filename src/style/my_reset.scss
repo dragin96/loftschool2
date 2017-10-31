@@ -1,0 +1,22 @@
+*{
+	box-sizing: border-box;
+}
+input[type="text"],textarea{
+	outline:none;
+}
+html,
+body {
+	height: 100%;
+	font-family: Ubuntu;
+	line-height: 1.428;
+}
+body,ul,li {
+	padding: 0;
+	margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	margin:0;
+}
+ul,li{
+	list-style: none;
+}

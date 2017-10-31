@@ -1,0 +1,61 @@
+.review{
+	width: 100%;
+	height: 100vh;
+	min-height: 650px;
+	background-color: #d8d2cf;
+	&__items{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item{
+		width: 25%;
+		position: relative;
+		cursor:pointer;
+	}
+	&__images{
+		&:hover>.review__desc{
+			z-index: 1;
+			opacity: 1;
+		}
+	}
+	&__img{
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+	&__desc{
+		position: absolute;
+		top:0;
+		padding: 50px 20px;
+		color:white;
+		z-index: -1;
+		opacity: 0;
+		transition: opacity 1s;
+	}
+	&__name{
+		font-size: 14px;
+		font-weight: 400;
+		font-family: Gagalin-Regular;
+		margin-bottom: 30px;
+	}
+	&__text{
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.8;
+		margin-bottom: 30px;
+	}
+}
+.button-review{
+	width: 113px;
+	padding: 12px;
+	border:none;
+	color:#fff;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 13px;
+	background-color: #2f3234;
+	cursor: pointer;
+	&:hover{
+		box-shadow: inset 0 0 3px 0px #7d9ca3;
+	}
+}

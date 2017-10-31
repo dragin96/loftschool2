@@ -32,7 +32,7 @@ var path = {
     watch: {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
-        style: 'src/style/**/*.scss',
+        style: 'src/style/*.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -41,7 +41,7 @@ var path = {
 
 var config = {
     server: {
-        baseDir: "./build"
+        baseDir: "build"
     },
     tunnel: true,
     host: 'localhost',
@@ -75,15 +75,8 @@ gulp.task('js:build', function () {
 });
 
 gulp.task('style:build', function () {
-    gulp.src(path.src.style) 
-        .pipe(sourcemaps.init())
-        .pipe(sass({
-            sourceMap: true,
-            errLogToConsole: true
-        }))
-        .pipe(prefixer())
-        .pipe(cssmin())
-        .pipe(sourcemaps.write())
+    gulp.src(path.src.style)
+        .pipe(sass({outputStyle: 'compressed'}))
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });

@@ -1,0 +1,61 @@
+.list1{
+	height: 100vh;
+	min-height: 650px;
+	background-color: #313131;
+	background-image: url(../../img/background/texture.png),
+	url(../../img/background/bg1.png);
+	background-position: top right, center center;
+	background-attachment: fixed,fixed;
+	background-repeat: repeat,no-repeat;
+	background-size: auto,cover;
+	position: relative;
+	&__center{
+		width: 880px;
+		margin: auto;
+		display: flex; 
+	}
+	&__title{
+		width: 405px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: auto;
+	}
+	&__caption{
+		font-family: Lifehack;
+		letter-spacing: -1.63px;
+		color: #fff;
+		font-weight: 500;
+		line-height: 1;
+		font-size: 65px;
+	}
+	&__text{
+		font-family: Gagalin-Regular;
+		font-size: 72px;
+		color: #f9b43b;
+	}
+}
+.burger {
+	width: 447px;
+	height: 414px;
+	background-image: url(../../img/burger.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	position: relative;
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		background: url(../img/svg/drops.svg) center no-repeat;
+		width: 102%;
+		height: 79%;
+	}
+}
+.str-down{
+	width: 29px;
+	height: 19px;
+	cursor:pointer;
+	background: url("../img/svg/str-down.svg") no-repeat;
+	margin:auto;
+}

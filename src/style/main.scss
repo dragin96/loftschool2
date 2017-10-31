@@ -1,8 +1,25 @@
-/*
-* Third Party
-*/
-@import "../../bower_components/normalize.css/normalize.css";
+@import "my_reset.scss";
+@import "font.scss";
+@import "header.scss";
+@import "helo-page.scss";
+@import "we-best.scss";
+@import "review.scss";
 body{
-  color:blue;
+	font-size:100%
 }
-
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 96px;
+    margin-left:136px;
+}
+.button{
+	width: 100px;
+	padding: 11px 0;
+	border: 0;
+	background-color: #e45028;
+	color:white;
+	cursor: pointer;
+	border-radius:3px;
+}

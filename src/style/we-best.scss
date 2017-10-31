@@ -4,12 +4,12 @@
 	min-height: 650px;
 	background-color: #d8d2cf;
 	background-image: 
-	url(../../img/ico/cheese-dip.png),
-	url(../../img/ico/tomato-1.png),
-	url(../../img/ico/tomato-2.png),
-	url(../../img/ico/lettuce.png),
-	url(../../img/ico/chees.png),
-	url(../../img/background/we-best.png);
+	url(../img/ico/cheese-dip.png),
+	url(../img/ico/tomato-1.png),
+	url(../img/ico/tomato-2.png),
+	url(../img/ico/lettuce.png),
+	url(../img/ico/chees.png),
+	url(../img/background/we-best.png);
 	background-position: 
 	top left, 
 	bottom left, 
@@ -41,13 +41,13 @@
 		background-repeat: no-repeat;
 		margin-bottom: 28px;
 		&-meat{
-			background-image: url(../../img/svg/meat.svg);
+			background-image: url(../img/svg/meat.svg);
 		} 
 		&-hand{
-			background-image: url(../../img/svg/hand.svg);
+			background-image: url(../img/svg/hand.svg);
 		}
 		&-sheet{
-			background-image: url(../../img/svg/natural.svg);
+			background-image: url(../img/svg/natural.svg);
 		}
 	}
 	&__title{

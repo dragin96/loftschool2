@@ -2,8 +2,8 @@
 	height: 100vh;
 	min-height: 650px;
 	background-color: #313131;
-	background-image: url(../../img/background/texture.png),
-	url(../../img/background/bg1.png);
+	background-image: url(../img/background/texture.png),
+	url(../img/background/bg1.png);
 	background-position: top right, center center;
 	background-attachment: fixed,fixed;
 	background-repeat: repeat,no-repeat;
@@ -38,7 +38,7 @@
 .burger {
 	width: 447px;
 	height: 414px;
-	background-image: url(../../img/burger.png);
+	background-image: url(../img/burger.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -56,6 +56,6 @@
 	width: 29px;
 	height: 19px;
 	cursor:pointer;
-	background: url("../img/svg/str-down.svg") no-repeat;
+	background: url(../img/svg/str-down.svg) no-repeat;
 	margin:auto;
 }

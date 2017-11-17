@@ -1,18 +1,25 @@
 .nav {
 	display: flex;
+	white-space: nowrap;
+	justify-content: space-between;
+
 	&__items {
+		width: 79.4%;
 		display: flex;
+		@include tablet{
+			display: none;
+		}
 	}
 	&__item {
 		display: flex;
 		align-self: center;
 		&::after{
 			content:"•";
-			margin:0 15px;
+			margin:0 rem(15px);
 		}
 		&:last-child::after{
 			content:"";
-			margin:0 15px;
+			margin:0 rem(15px);
 		}
 	}
 	&__href{
@@ -20,13 +27,14 @@
 		text-decoration: none;
 		font-family: Ubuntu;
 		text-transform: uppercase;
-		font-size:13px;
+		font-size:rem(13px);
 		&:hover{
 			text-decoration: underline;
 		}
 	}
 	&__button{
 		align-self: center;
+		margin-right: rem(10px);
 	}
 }
 
@@ -38,21 +46,27 @@
 	margin: auto;
 	z-index: 1;
 	&__wrap {
+		width: 100%;
 		display: flex;
-		padding-top: 12px;
-		justify-content: space-between;
+		padding-top: rem(12px);
+		justify-content: space-around;
+		@include tablet{
+			justify-content: space-between;
+			padding-left: rem(10px);
+			padding-right: rem(10px);
+		}
 	}
 }
 .container {
-	width: 77.872vw;
-	height: 100%;
+	width: 80%;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	margin: auto;
 }
 .logo {
-	width: 92px;
-	height: 69px;
+	width: rem(92px);
+	height: rem(69px);
 	overflow: hidden;
 	&__href{
 		display: block;
@@ -63,31 +77,49 @@
 }
 
 .nav-circle {
-	width: 20px;
-	height: 160px;
+	width: rem(20px);
+	height: rem(160px);
 	position: fixed;
-	right: 73px;
-	top: 88px;
+	right: rem(73px);
+	top: rem(88px);
 	z-index: 1;
 	cursor:pointer;
+	@include phone {
+		display: none;
+	}
 	&__item {
-		width: 9px;
-		height: 9px;
+		width: rem(9px);
+		height: rem(9px);
 		background-color: #ffffff;
-		margin-bottom: 13px;
-		padding: 2px;
-		border-radius: 5px;
+		margin-bottom: rem(13px);
+		padding: rem(2px);
+		border-radius: rem(5px);
 		position:relative;
 		&-active::after{
 			content:"";
 			display:block;
-			width: 14px;
-			height: 14px;
+			width: .8rem;
+			height: .8rem;
 			position:absolute;
-			border: white 1px solid;
+			border: white rem(1px) solid;
 			border-radius: 50%;
-			top: -3px;
-			left: -3px;
+			top: rem(-3px);
+			left: rem(-3px);
 		}
+	}
+}
+
+.burg {
+	width: 27px;
+	height: 27px;
+	align-self: center;
+	overflow: hidden;
+	display: none;
+	@include tablet{
+		display: block;
+	}
+	&__svg{
+		width: 27px;
+		height: 27px;
 	}
 }

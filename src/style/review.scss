@@ -1,8 +1,7 @@
 .review{
 	width: 100%;
-	height: 100vh;
-	min-height: 650px;
-	background-color: #d8d2cf;
+	min-height: rem(650px);
+	background-color: #2e2e2e;
 	&__items{
 		display: flex;
 		flex-wrap: wrap;
@@ -11,9 +10,20 @@
 		width: 25%;
 		position: relative;
 		cursor:pointer;
+		@include  notebook{
+			width: 50%;
+			height: rem(320px);
+			text-align: center;
+		}
+		@include phone{
+			height: auto;
+		}
 	}
 	&__images{
+		overflow: hidden;
+		filter: grayscale(100%);
 		&:hover>.review__desc{
+			background-color: rgba(0, 0, 0, 0.47);
 			z-index: 1;
 			opacity: 1;
 		}
@@ -24,38 +34,64 @@
 		display: block;
 	}
 	&__desc{
+		height: 100%;
 		position: absolute;
 		top:0;
-		padding: 50px 20px;
+		padding: rem(50px) rem(20px);
 		color:white;
 		z-index: -1;
 		opacity: 0;
 		transition: opacity 1s;
+		@include notebook{
+			padding: rem(25px) rem(20px);
+		}
+		@include phone{
+			width: 100%;
+		}
 	}
 	&__name{
-		font-size: 14px;
+		font-size: rem(14px);
 		font-weight: 400;
 		font-family: Gagalin-Regular;
-		margin-bottom: 30px;
+		margin-bottom: rem(30px);
+		@include phone{
+			display: none;
+		}
 	}
 	&__text{
 		font-weight: 400;
-		font-size: 14px;
+		font-size: rem(14px);
 		line-height: 1.8;
-		margin-bottom: 30px;
+		margin-bottom: rem(30px);
+		@include phone {
+			display: none;
+		}
 	}
 }
 .button-review{
-	width: 113px;
-	padding: 12px;
+	width: rem(113px);
+	padding: rem(12px);
 	border:none;
 	color:#fff;
 	text-transform: uppercase;
 	font-weight: 500;
-	font-size: 13px;
+	font-size: rem(13px);
 	background-color: #2f3234;
 	cursor: pointer;
+	@include notebook{
+		display: block;
+		margin: auto;
+	}
+	@include phone{
+		height: rem(40px);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
 	&:hover{
-		box-shadow: inset 0 0 3px 0px #7d9ca3;
+		box-shadow: inset 0 0 rem(3px) rem(0px) #7d9ca3;
 	}
 }

@@ -1,25 +1,56 @@
 @import "my_reset.scss";
+@import "media.scss";
 @import "font.scss";
 @import "header.scss";
 @import "helo-page.scss";
 @import "we-best.scss";
 @import "review.scss";
+@import "team.scss";
+@import "menu.scss";
+@import "form.scss";
+@import "map.scss";
+
+html{
+	font-size:16px;
+	@include notebook{
+		font-size:15px;
+	}
+	@include tablet{
+		font-size:14px;
+	}
+	@include phone{
+		font-size:13px;
+	}
+}
 body{
-	font-size:100%
+	font-size:100%;
 }
 .container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-right: 96px;
-    margin-left:136px;
+	width: 80%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	@include notebook{
+		flex-direction: column;
+		width: 100%;
+	}
 }
 .button{
-	width: 100px;
-	padding: 11px 0;
+	width: rem(100px);
+	padding: rem(11px) 0;
 	border: 0;
 	background-color: #e45028;
 	color:white;
 	cursor: pointer;
-	border-radius:3px;
+	border-radius:rem(3px);
+}
+.button-reset{
+	border:none;
+	background-color: transparent;
+	color:#fff;
+	color:inherit;
+	outline: none;
+	cursor: pointer;
 }

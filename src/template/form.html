@@ -1,0 +1,63 @@
+<section class="delivery">
+	<div class="container">
+		<div class="delivery__wrap">			
+		<h2 class="delivery__title">Закажите доставку</h2>
+			<form class="delivery__form" action="POST">
+				<div class="delivery__side">
+					<ul class="delivery__contact">
+						<li class="delivery__input-block block-name">
+							<label for="name" class="delivery__label delivery__label-name">Имя</label>
+							<input type="text" id="name" class="delivery__input delivery__input-name">
+						</li>
+						<li class="delivery__input-block block-phone">
+							<label for="phone" class="delivery__label delivery__label-phone">Телефон</label>
+							<input type="tel" id="phone" class="delivery__input delivery__input-phone">
+						</li>
+						<li class="delivery__input-block block-street">
+							<label for="street" class="delivery__label delivery__label-street">Улица</label>
+							<input type="text" id="street" class="delivery__input delivery__input-street">
+						</li>
+						<li class="delivery__input-block block-house">
+							<label for="house" class="delivery__label delivery__label-house">Дом</label>
+							<input type="number" id="house" class="delivery__input delivery__input-house">
+						</li>
+						<li class="delivery__input-block block-housing">
+							<label for="housing" class="delivery__label delivery__label-housing">Корпус</label>
+							<input type="number" id="housing" class="delivery__input delivery__input-housing">
+						</li>
+						<li class="delivery__input-block block-apartment">
+							<label for="apartment" class="delivery__label delivery__label-apartment">Квартира</label>
+							<input type="number" id="apartment" class="delivery__input delivery__input-apartment">
+						</li>
+						<li class="delivery__input-block block-floor">
+							<label for="floor" class="delivery__label delivery__label-floor">Этаж</label>
+							<input type="number" id="floor" class="delivery__input delivery__input-floor">
+						</li>
+					</ul>
+				</div>
+				<div class="delivery__side">
+					<ul class="delivery__dop-info">
+						<li class="delivery__input-block block-coment">
+							<label for="coment" class="delivery__label-coment">Комментарий</label>
+							<textarea id="coment" class="delivery__input-coment"></textarea>
+						</li>
+						<li class="delivery__input-block delivery__input-block_radio">
+							<input type="radio" class="delivery__input-pay" id="pay1" name="pay">
+							<label for="pay1" class="delivery__label-pay delivery__label-pay_surrender"></label>
+							<input type="radio" class="delivery__input-pay" id="pay2" name="pay" checked>
+							<label for="pay2" class="delivery__label-pay delivery__label-pay_card"></label>
+						</li>
+						<li class="delivery__input-block delivery__input-block_radio">
+							<input type="checkbox" id="dialing" class="delivery__input-dialing">
+							<label for="dialing" class="delivery__label-dialing"></label>
+						</li>
+						<li class="delivery__input-block_radio">
+							<input type="submit" class="button" value="Заказать">
+							<input type="reset" class="button-reset" value="Очистить">
+						</li>
+					</ul>
+				</div>
+			</form>
+		</div>
+	</div>
+</section> 

@@ -1,0 +1,87 @@
+.menu{
+	width: 100%;
+	height: 100vh;
+	min-height: rem(650px);
+	background-color: #d8d2cf;
+	background-image: url(../img/background/menu.png);
+	background-position: left center;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	&__title{
+		font-family: Gagalin-Regular;
+		font-size: rem(72px);
+		color:#fff;
+		font-weight: 400;
+		padding: rem(112px) 0 0 rem(94px);
+		@include phone{
+			padding: 10px;
+			font-size:rem(42px);
+		}
+	}
+} 
+.menu-accordeon{
+	height: 100%;
+	position: absolute;
+	right: 0;
+	display: flex;
+	&__item{
+		width: rem(83px);
+		display: flex;
+		position: relative;
+		&-active{
+			width: rem(632px);
+			.menu-accordeon__desc{
+				display: block;
+				width: rem(549px);
+			}
+		}
+	}
+	&__desc {
+		width: 0;
+		display: none;
+		overflow: hidden;
+		height: 100%;
+		position: relative;
+		background-color: #2f3234;
+		opacity: 0.93;
+		z-index: 1;
+		font-size: rem(14px);
+		font-weight: 400;
+		color: #fff;
+		padding: rem(63px) rem(35px);
+	}
+	&__title{
+		transform:rotate(-90deg);
+		text-align:center;
+		font-family: Gagalin-Regular;
+		font-size: rem(40px);
+		font-weight: 400;
+		color:#fff;
+		white-space: nowrap;
+		height: rem(83px);
+		display: inline-flex;
+		line-height: rem(83px);
+
+	}
+	&__bg{
+		height: 100%;
+		display: inline-flex;
+		width: rem(83px);
+		justify-content: center;
+		align-items: center;
+		background-size: rem(1100px) 100%;
+		&-meat{
+			background-image: url(../img/background/menu4.png);
+			background-position: -631px 0;
+		}
+		&-vegetr{
+			background-image: url(../img/background/menu3.png);
+			background-position: -593px 0;
+		}
+		&-diet{
+			background-image: url(../img/background/menu1.png);
+			background-position: -627px 0;	
+		}
+	}
+}

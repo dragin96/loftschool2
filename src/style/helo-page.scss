@@ -1,6 +1,6 @@
 .list1{
 	height: 100vh;
-	min-height: 650px;
+	min-height: rem(650px);
 	background-color: #313131;
 	background-image: url(../img/background/texture.png),
 	url(../img/background/bg1.png);
@@ -10,16 +10,30 @@
 	background-size: auto,cover;
 	position: relative;
 	&__center{
-		width: 880px;
+		width: 100%;
+		height: 50%;
+		justify-content: space-around;
 		margin: auto;
-		display: flex; 
+		display: flex;
+		@include tablet{
+			flex-direction: column;
+			height: 100%;
+		}
 	}
 	&__title{
-		width: 405px;
+		width: 50%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		margin: auto;
+		@include tablet{
+			height: auto;
+		}
+		@include phone{
+			text-align: center;
+			width: 100%;
+			height: auto;
+		}		
 	}
 	&__caption{
 		font-family: Lifehack;
@@ -27,35 +41,44 @@
 		color: #fff;
 		font-weight: 500;
 		line-height: 1;
-		font-size: 65px;
+		font-size: rem(65px);
+		@include tablet{
+			text-align: center;
+		}
 	}
 	&__text{
+		width: 100%;
 		font-family: Gagalin-Regular;
-		font-size: 72px;
+		font-size: rem(72px);
 		color: #f9b43b;
+		white-space: nowrap;
+		@include tablet{
+			height: 40%;
+		}
+		@include phone{
+			height: 100%;
+		}
 	}
 }
 .burger {
-	width: 447px;
-	height: 414px;
+	width: 50%;
+	@include tablet{
+		height: 50%;
+		margin: auto;
+	}
+	@include phone{
+		width: 80%;
+	}
 	background-image: url(../img/burger.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
 	position: relative;
-	&:after{
-		content: "";
-		display: block;
-		position: absolute;
-		background: url(../img/svg/drops.svg) center no-repeat;
-		width: 102%;
-		height: 79%;
-	}
 }
 .str-down{
-	width: 29px;
-	height: 19px;
+	width: 2.3rem;
+	height: rem(19px);
 	cursor:pointer;
 	background: url(../img/svg/str-down.svg) no-repeat;
-	margin:auto;
+	margin: 0 auto;
 }

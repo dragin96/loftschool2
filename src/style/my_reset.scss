@@ -9,6 +9,8 @@ body {
 	height: 100%;
 	font-family: Ubuntu;
 	line-height: 1.428;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 body,ul,li {
 	padding: 0;

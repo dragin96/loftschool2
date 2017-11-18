@@ -9,6 +9,7 @@
 @import "menu.scss";
 @import "form.scss";
 @import "map.scss";
+@import "courusel.scss";
 
 html{
 	font-size:16px;
@@ -19,7 +20,7 @@ html{
 		font-size:14px;
 	}
 	@include phone{
-		font-size:13px;
+		font-size:12px;
 	}
 }
 body{

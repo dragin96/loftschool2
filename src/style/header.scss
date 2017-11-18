@@ -84,7 +84,7 @@
 	top: rem(88px);
 	z-index: 1;
 	cursor:pointer;
-	@include phone {
+	@include tablet {
 		display: none;
 	}
 	&__item {

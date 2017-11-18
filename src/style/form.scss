@@ -31,7 +31,7 @@
 	&__title{
 		font-family: Gagalin-Regular;
 		text-align:center;
-		font-size: rem(72px);
+		font-size: 4rem;
 		font-weight: 400;
 		color: #f9b43b;
 		margin: 0 auto;
@@ -116,11 +116,11 @@
 			}
 			&_surrender::before{
 				content:'Потребуется сдача';
-				top: -rem(6px);			
+				top: -6px;			
 			}
 			&_card::before{ 
 				content: 'Оплата по карте';
-				top: -rem(5px);
+				top: -5px;
 			}
 		}
 		&-dialing{
@@ -156,6 +156,10 @@
 		&_radio{
 			width: 100%;
 			flex-direction:row;
+			@include phone{
+				width: 250px;
+				text-align: center;
+			}
 		}
 		display: inline-flex;
 		flex-direction: column;

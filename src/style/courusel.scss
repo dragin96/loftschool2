@@ -1,0 +1,162 @@
+.courusel{
+	width: 100%;
+	height: 100vh;
+	min-height:rem(650px);
+	background-color: #ffb038;
+	background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+	&__wrapper {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		margin: auto;
+	}
+	&__wrap{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		@include notebook{
+			padding: 10px;
+		}
+		@include tablet{
+			flex-direction: column;
+		}
+	}
+	&__images{
+		width: 52.8795%;
+		display: flex;
+		align-items: center;
+		margin: auto;
+		flex-direction: column;
+		@include tablet{
+			width: 100%;
+			flex-direction: row;
+			justify-content: center;
+		}
+	}
+	&__image{
+		width: 85%;
+		@include tablet{
+			width: 60%;
+			height: 100%;
+		}
+	}
+	&__img{
+		width: 85%;
+		@include tablet{
+			width: 100%;
+			text-align: center;
+		}
+	}
+	&__composition{
+		width: rem(90px);
+		display: flex;
+		height: rem(90px);
+		background-color: #e35028b3;
+		border-radius: rem(5px);
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		align-self: flex-start;
+		@include phone{
+			position: relative;
+			bottom: 60px;
+		}
+		&::after {
+			content: "Состав";
+			color: #ffffff;
+			font-family: Gagalin-Regular;
+			font-size: rem(14px);
+			font-weight: 400;
+		}
+		&-svg{
+			fill: white;
+			opacity: 0.5;
+		}
+	}
+	&__kalor{
+		display: flex;
+		align-self: flex-start;
+		position: relative;
+		flex-direction: column;
+		@include phone{
+			position: relative;
+			bottom: 50px;
+		}
+		&::before {
+			content: attr(info);
+			position: absolute;
+			height: 20%;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			font-family: Gagalin-Regular;
+			color: #fff;
+			text-align: center;
+		}
+		&::after {
+			content: "ккал";
+			text-align: center;
+			font-family: Gagalin-Regular;
+			color: #fff;
+		}
+		&-svg{
+			fill: white;
+			opacity: 0.5;
+		}
+	}
+	&__info{
+		width: 47.1205%;
+		color: #fff;
+		@include tablet{
+			width: 90%;
+			text-align: center;
+		}
+	}
+	&__name{
+		font-family: Gagalin-regular;
+		font-size: rem(72px);
+		font-weight: 400;
+		margin-bottom: rem(20px);
+		line-height: 1;
+	}
+	&__desc{
+		width: 90%;
+		font-weight: 400;//300
+		font-size: rem(14px);
+		line-height: 1.9;
+	}
+	&__buy{
+		display: flex;
+		@include tablet{
+			display: inline-flex;
+		}
+	}
+	&__price{
+		font-size: rem(72px);
+		color: #e35028;
+		font-family: Gagalin-regular;
+		margin-right: rem(20px);
+		&:after {
+			content: " рублей";
+			font-size: rem(30px);
+		}
+	}
+	&__button{
+		align-self: flex-end;
+	}
+}
+.str{
+	background: url(../img/svg/str-down.svg) no-repeat;
+	width: 6.1875rem;
+	height: 2.3rem;
+	cursor: pointer;
+	&_left{
+		transform: rotate(-90deg);
+	}
+	&_right{
+		transform: rotate(90deg);
+	}
+}

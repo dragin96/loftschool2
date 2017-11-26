@@ -8,19 +8,22 @@
 	<link id="page_favicon" href="favicon.ico" rel="icon" type="image/x-icon">
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="css/main.css">
+	<script src="jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.css"></script>
 	<link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500" rel="stylesheet">
 </head>
 <body>
 		<nav class="nav-circle">
 			<ul class="nav-circle__items">
-				<li class="nav-circle__item nav-circle__item-active"></li>
-				<li class="nav-circle__item"></li>
-				<li class="nav-circle__item"></li>
-				<li class="nav-circle__item"></li>
-				<li class="nav-circle__item"></li>
-				<li class="nav-circle__item"></li>
-				<li class="nav-circle__item"></li>
-				<li class="nav-circle__item"></li>
+				<a href="#helo-page" class="nav-circle__href"><li class="nav-circle__item is-active"></li></a>
+				<a href="#courusel" class="nav-circle__href"><li class="nav-circle__item"></li></a>
+				<a href="#we-best" class="nav-circle__href"><li class="nav-circle__item"></li></a>
+				<a href="#review" class="nav-circle__href"><li class="nav-circle__item"></li></a>
+				<a href="#team" class="nav-circle__href"><li class="nav-circle__item"></li></a>
+				<a href="#menu" class="nav-circle__href"><li class="nav-circle__item"></li></a>
+				<a href="#delivery" class="nav-circle__href"><li class="nav-circle__item"></li></a>
+				<a href="#map" class="nav-circle__href"><li class="nav-circle__item"></li></a>
 			</ul>
 		</nav>
 	<div class="wrapper">
@@ -35,25 +38,25 @@
 					<nav class="nav">
 						<ul class="nav__items">
 							<li class="nav__item">
-								<a class="nav__href" href="#section">О нас</a>
+								<a class="nav__href" href="#helo-page">О нас</a>
 							</li>
 							<li class="nav__item">
-								<a class="nav__href" href="#section">Бургеры</a>
+								<a class="nav__href" href="#courusel">Бургеры</a>
 							</li>
 							<li class="nav__item">
-								<a class="nav__href" href="#section">Команда</a>
+								<a class="nav__href" href="#team">Команда</a>
 							</li>
 							<li class="nav__item">
-								<a class="nav__href" href="#section">Меню</a>
+								<a class="nav__href" href="#menu">Меню</a>
 							</li>
 							<li class="nav__item">
-								<a class="nav__href" href="#section">Отзывы</a>
+								<a class="nav__href" href="#review">Отзывы</a>
 							</li>
 							<li class="nav__item">
-								<a class="nav__href" href="#section">Контакты</a>
+								<a class="nav__href" href="#map">Контакты</a>
 							</li>
 						</ul>
-						<button class="button nav__button">Заказать</button>
+						<a class="button nav__button" href="#delivery">Заказать</a>
 						<div class="burg">
 							<svg class="burg__svg"><use xlink:href="/svg/symbols.svg#burg"></use></svg>
 						</div>
@@ -61,7 +64,33 @@
 				</div>
 			</div>
 		</header>
-		<section class="list1">
+		<div  class="menu_burg" style="display: none;">
+			<div class="menu_burg__logo">
+				<div class="logo">
+					<a class="logo__href" href=".">
+						<img class="logo__img"  src="img/svg/logo.svg" alt="logo">
+					</a>
+				</div>
+				<a href="#" class="close menu_burg__close">
+					<svg class="close__svg" width="22" height="22" viewBox="0 0 22 22">
+						<use xlink:href="svg/symbols.svg#close"></use>
+					</svg>
+				</a>
+			</div>
+			<div class="menu_burg__wrap">
+				<nav class="menu_burg__nav">
+					<ul class="menu_burg__items"> 
+						<li class="menu_burg__item"><a class="menu_burg__href" href="#helo-page">Почему мы </a></li>
+						<li class="menu_burg__item"><a class="menu_burg__href"  href="#courusel">Меню </a></li>
+						<li class="menu_burg__item"><a class="menu_burg__href"  href="#menu">Советы </a></li>
+						<li class="menu_burg__item"><a class="menu_burg__href"  href="#team">Кто мы </a></li>
+						<li class="menu_burg__item"><a class="menu_burg__href"  href="#delivery">Свяжитесь с нами </a></li>
+						<li class="menu_burg__item"><a class="menu_burg__href"  href="#map">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<section id="helo-page" class="list1">
 			<div class="container">
 				<div class="list1__center">
 					<div class="burger"></div>
@@ -70,10 +99,214 @@
 						<h1 class="list1__caption">натуральные  бургеры</h1>
 					</div>
 				</div>
-				<div class="str-down"></div>
+				<a href="#courusel" class="list1__href">
+					<div class="str-down"></div>
+				</a>
 			</div>
 		</section>
-		<section class="we-best">
+		<section id="courusel" class="courusel">
+			<div class="container">
+				<div class="courusel__wrapper">
+					<div class="str str_right"></div>	
+					<ul class="courusel__container">
+						<li class="courusel__wrap courusel__wrap_active">
+							<div class="courusel__images">
+								<div class="courusel__composition">
+									<svg width="60" height="60" viewBox="0 0 60"  class="courusel__composition-svg">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sprite.svg#burger"></use>
+									</svg>
+									<div class="composition">
+										<ul class="composition__items">
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#beef"></use></svg>
+												</div>
+												<div class="composition__name">Говядина</div>
+												<div class="composition__weight">300 г</div>
+											</li>
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#buns"></use></svg>
+												</div>
+												<div class="composition__name">Булочки</div>
+												<div class="composition__weight">100 г</div>
+											</li>
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#salad"></use></svg>
+												</div>
+												<div class="composition__name">Соус</div>
+												<div class="composition__weight">150 г</div>
+											</li>
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#cucumber"></use></svg>
+												</div>
+												<div class="composition__name">Овощи</div>
+												<div class="composition__weight">200 г</div>
+											</li>
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#cheese"></use></svg>
+												</div>
+												<div class="composition__name">Сыр</div>
+												<div class="composition__weight">200 г</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="courusel__image">
+									<img src="img/ico/corusel-1.png" alt="Burger" class="courusel__img">
+								</div>
+								<div class="courusel__kalor" info="1200">
+									<svg width="60" height="60" viewBox="0 0 60" class="courusel__kalor-svg" >
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sprite.svg#kkal"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="courusel__info">
+								<h2 class="courusel__name">Dark BEEF Burger</h2>
+								<div class="courusel__desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+								<div class="courusel__buy">
+									<div class="courusel__price">500</div>
+									<button class="button courusel__button">Заказать</button>
+								</div>
+							</div>
+						</li>
+						<li class="courusel__wrap">
+							<div class="courusel__images">
+								<div class="courusel__composition">
+									<svg width="60" height="60" viewBox="0 0 60"  class="courusel__composition-svg">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sprite.svg#burger"></use>
+									</svg>
+									<div class="composition">
+										<ul class="composition__items">
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#beef"></use></svg>
+												</div>
+												<div class="composition__name">Говядина</div>
+												<div class="composition__weight">300 г</div>
+											</li>
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#buns"></use></svg>
+												</div>
+												<div class="composition__name">Булочки</div>
+												<div class="composition__weight">100 г</div>
+											</li>
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#salad"></use></svg>
+												</div>
+												<div class="composition__name">Соус</div>
+												<div class="composition__weight">150 г</div>
+											</li>
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#cucumber"></use></svg>
+												</div>
+												<div class="composition__name">Овощи</div>
+												<div class="composition__weight">200 г</div>
+											</li>
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#cheese"></use></svg>
+												</div>
+												<div class="composition__name">Сыр</div>
+												<div class="composition__weight">200 г</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="courusel__image">
+									<img src="img/ico/corusel-1.png" alt="Burger" class="courusel__img">
+								</div>
+								<div class="courusel__kalor" info="1200">
+									<svg width="60" height="60" viewBox="0 0 60" class="courusel__kalor-svg" >
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sprite.svg#kkal"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="courusel__info">
+								<h2 class="courusel__name">Dark BEEF Burger</h2>
+								<div class="courusel__desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+								<div class="courusel__buy">
+									<div class="courusel__price">500</div>
+									<button class="button courusel__button">Заказать</button>
+								</div>
+							</div>
+						</li>
+						<li class="courusel__wrap">
+							<div class="courusel__images">
+								<div class="courusel__composition">
+									<svg width="60" height="60" viewBox="0 0 60"  class="courusel__composition-svg">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sprite.svg#burger"></use>
+									</svg>
+									<div class="composition">
+										<ul class="composition__items">
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#beef"></use></svg>
+												</div>
+												<div class="composition__name">Говядина</div>
+												<div class="composition__weight">300 г</div>
+											</li>
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#buns"></use></svg>
+												</div>
+												<div class="composition__name">Булочки</div>
+												<div class="composition__weight">100 г</div>
+											</li>
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#salad"></use></svg>
+												</div>
+												<div class="composition__name">Соус</div>
+												<div class="composition__weight">150 г</div>
+											</li>
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#cucumber"></use></svg>
+												</div>
+												<div class="composition__name">Овощи</div>
+												<div class="composition__weight">200 г</div>
+											</li>
+											<li class="composition__item">
+												<div class="composition__ico">
+													<svg width="45" height="40" viewBox="0 0 45 40" class="composition__svg"><use xlink:href="svg/symbols.svg#cheese"></use></svg>
+												</div>
+												<div class="composition__name">Сыр</div>
+												<div class="composition__weight">200 г</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="courusel__image">
+									<img src="img/ico/corusel-1.png" alt="Burger" class="courusel__img">
+								</div>
+								<div class="courusel__kalor" info="1200">
+									<svg width="60" height="60" viewBox="0 0 60" class="courusel__kalor-svg" >
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sprite.svg#kkal"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="courusel__info">
+								<h2 class="courusel__name">Dark BEEF Burger</h2>
+								<div class="courusel__desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+								<div class="courusel__buy">
+									<div class="courusel__price">500</div>
+									<button class="button courusel__button">Заказать</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="str str_left"></div>
+				</div>
+			</div>
+		</section>
+		<section id="we-best" class="we-best">
 			<div class="container">
 				<h2 class="name-section">Мы лучшие</h2>
 				<div class="we-best__center">
@@ -103,9 +336,20 @@
 				</div>
 			</div>
 		</section>
-		<section class="review">
+		<section id="review" class="review">
 			<ul class="review__items">
 				<li class="review__item">
+						<div class="modal">
+							<a href="#" class="modal__close close">
+								<svg class="close__svg" width="22" height="22" viewBox="0 0 22 22">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/symbols.svg#close"></use>
+								</svg>
+							</a>
+							<h2 class="modal__name">Константин Спилберг</h2>
+							<div class="modal__text">
+								Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+							</div>
+						</div>
 					<div class="review__images">
 						<img class="review__img" src="img/content/1.jpg">
 						<div class="review__desc">
@@ -116,8 +360,18 @@
 					</div>
 				</li>
 				<li class="review__item">
+						<div class="modal">
+							<a href="#" class="modal__close close">
+								<svg class="close__svg" width="22" height="22" viewBox="0 0 22 22">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/symbols.svg#close"></use>
+								</svg>
+							</a>
+							<h2 class="modal__name">Константин Спилберг</h2>
+							<div class="modal__text">
+								Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+							</div>
+						</div>
 					<div class="review__images"><img class="review__img" src="img/content/2.jpg">
-		
 						<div class="review__desc">
 							<div class="review__name">Константин Спилберг</div>
 							<div class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
@@ -126,8 +380,18 @@
 					</div>
 				</li>
 				<li class="review__item">
+						<div class="modal">
+							<a href="#" class="modal__close close">
+								<svg class="close__svg" width="22" height="22" viewBox="0 0 22 22">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/symbols.svg#close"></use>
+								</svg>
+							</a>
+							<h2 class="modal__name">Константин Спилберг</h2>
+							<div class="modal__text">
+								Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+							</div>
+						</div>
 					<div class="review__images"><img class="review__img" src="img/content/3.jpg">
-		
 						<div class="review__desc">
 							<div class="review__name">Константин Спилберг</div>
 							<div class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
@@ -136,8 +400,18 @@
 					</div>
 				</li>
 				<li class="review__item">
+						<div class="modal">
+							<a href="#" class="modal__close close">
+								<svg class="close__svg" width="22" height="22" viewBox="0 0 22 22">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/symbols.svg#close"></use>
+								</svg>
+							</a>
+							<h2 class="modal__name">Константин Спилберг</h2>
+							<div class="modal__text">
+								Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+							</div>
+						</div>
 					<div class="review__images"><img class="review__img" src="img/content/4.jpg">
-		
 						<div class="review__desc">
 							<div class="review__name">Константин Спилберг</div>
 							<div class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
@@ -146,6 +420,17 @@
 					</div>
 				</li>
 				<li class="review__item">
+						<div class="modal">
+							<a href="#" class="modal__close close">
+								<svg class="close__svg" width="22" height="22" viewBox="0 0 22 22">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/symbols.svg#close"></use>
+								</svg>
+							</a>
+							<h2 class="modal__name">Константин Спилберг</h2>
+							<div class="modal__text">
+								Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+							</div>
+						</div>
 					<div class="review__images"><img class="review__img" src="img/content/5.jpg">
 		
 						<div class="review__desc">
@@ -156,6 +441,17 @@
 					</div>
 				</li>
 				<li class="review__item">
+						<div class="modal">
+							<a href="#" class="modal__close close">
+								<svg class="close__svg" width="22" height="22" viewBox="0 0 22 22">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/symbols.svg#close"></use>
+								</svg>
+							</a>
+							<h2 class="modal__name">Константин Спилберг</h2>
+							<div class="modal__text">
+								Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+							</div>
+						</div>
 					<div class="review__images"><img class="review__img" src="img/content/6.jpg">
 		
 						<div class="review__desc">
@@ -166,8 +462,18 @@
 					</div>
 				</li>
 				<li class="review__item">
+						<div class="modal">
+							<a href="#" class="modal__close close">
+								<svg class="close__svg" width="22" height="22" viewBox="0 0 22 22">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/symbols.svg#close"></use>
+								</svg>
+							</a>
+							<h2 class="modal__name">Константин Спилберг</h2>
+							<div class="modal__text">
+								Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+							</div>
+						</div>
 					<div class="review__images"><img class="review__img" src="img/content/7.jpg">
-		
 						<div class="review__desc">
 							<div class="review__name">Константин Спилберг</div>
 							<div class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
@@ -176,8 +482,18 @@
 					</div>
 				</li>
 				<li class="review__item">
+						<div class="modal">
+							<a href="#" class="close modal__close">
+								<svg class="close__svg" width="22" height="22" viewBox="0 0 22 22">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/symbols.svg#close"></use>
+								</svg>
+							</a>
+							<h2 class="modal__name">Константин Спилберг</h2>
+							<div class="modal__text">
+								Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+							</div>
+						</div>
 					<div class="review__images"><img class="review__img" src="img/content/8.jpg">
-		
 						<div class="review__desc">
 							<div class="review__name">Константин Спилберг</div>
 							<div class="review__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
@@ -187,7 +503,7 @@
 				</li>
 			</ul>
 		</section>
-		 <section class="team">
+		 <section id="team" class="team">
 		 	<div class="team__wrap">
 		 		<div class="team__container">
 		 			<h2 class="team__title">Команда</h2>
@@ -241,30 +557,32 @@
 		 		</div>
 		 	</div>
 		 </section>
-		<section class="menu">
+		<section id="menu" class="menu">
 			<h2 class="menu__title">Меню</h2>
-			<ul class="menu-accordeon">
-				<li class="menu-accordeon__item"><!-- menu-accordeon__item-active-->
-					<div class="menu-accordeon__bg menu-accordeon__bg-meat">
-						<div class="menu-accordeon__title">Для мясоедов</div>
-					</div>
-					<div class="menu-accordeon__desc">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову. </div>
-				</li>
-				<li class="menu-accordeon__item ">
-					<div class="menu-accordeon__bg menu-accordeon__bg-vegetr">
-						<div class="menu-accordeon__title">Вегетарианское</div>
-					</div>
-					<div class="menu-accordeon__desc">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову. </div>
-				</li>
-				<li class="menu-accordeon__item">
-					<div class="menu-accordeon__bg menu-accordeon__bg-diet">
-						<div class="menu-accordeon__title">Диетическое</div>
-					</div>
-					<div class="menu-accordeon__desc">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову. </div>
-				</li>
-			</ul>
+			<div class="menu__wrapper">
+				<ul class="menu-accordeon">
+					<li class="menu-accordeon__item"><!-- menu-accordeon__item-active-->
+						<div class="menu-accordeon__bg menu-accordeon__bg-meat">
+							<div class="menu-accordeon__title">Для мясоедов</div>
+						</div>
+						<div class="menu-accordeon__desc">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову. </div>
+					</li>
+					<li class="menu-accordeon__item ">
+						<div class="menu-accordeon__bg menu-accordeon__bg-vegetr">
+							<div class="menu-accordeon__title">Вегетарианское</div>
+						</div>
+						<div class="menu-accordeon__desc">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову. </div>
+					</li>
+					<li class="menu-accordeon__item">
+						<div class="menu-accordeon__bg menu-accordeon__bg-diet">
+							<div class="menu-accordeon__title">Диетическое</div>
+						</div>
+						<div class="menu-accordeon__desc">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову. </div>
+					</li>
+				</ul>
+			</div>
 		</section>
-		<section class="delivery">
+		<section id="delivery" class="delivery">
 			<div class="container">
 				<div class="delivery__wrap">			
 				<h2 class="delivery__title">Закажите доставку</h2>
@@ -327,7 +645,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="map">
+		<section id="map" class="map">
 			<div class="map__img">
 				<div class="metka metka-1"></div>
 				<div class="metka metka-2"></div>

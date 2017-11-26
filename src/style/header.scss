@@ -39,12 +39,17 @@
 }
 
 .header{
-	position: absolute;
+	position: fixed;
 	color: white;
 	left: 0;
 	right: 0;
 	margin: auto;
-	z-index: 1;
+	z-index: 5;
+	padding-bottom: 5px;
+	&_active{
+		background-color: #0d0f10;
+		box-shadow: 0px 4px 11px black;
+	}
 	&__wrap {
 		width: 100%;
 		display: flex;
@@ -77,15 +82,16 @@
 }
 
 .nav-circle {
-	width: rem(20px);
-	height: rem(160px);
 	position: fixed;
 	right: rem(73px);
-	top: rem(88px);
+	top: rem(120px);
 	z-index: 1;
 	cursor:pointer;
 	@include tablet {
 		display: none;
+	}
+	&__href{
+		display: block;
 	}
 	&__item {
 		width: rem(9px);
@@ -95,7 +101,7 @@
 		padding: rem(2px);
 		border-radius: rem(5px);
 		position:relative;
-		&-active::after{
+		&.is-active::after{
 			content:"";
 			display:block;
 			width: .8rem;
@@ -115,6 +121,7 @@
 	align-self: center;
 	overflow: hidden;
 	display: none;
+	cursor: pointer;
 	@include tablet{
 		display: block;
 	}

@@ -5,22 +5,37 @@
 	background-color: #ffb038;
 	background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
 	&__wrapper {
+		width: 100%;
 		height: 100%;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		margin: auto;
+		position: relative;
+		overflow: hidden;
 	}
 	&__wrap{
-		display: flex;
+		display: inline-flex;
 		justify-content: center;
 		align-items: center;
 		margin: auto;
+		white-space: initial;
+		font-size: initial;
 		@include notebook{
 			padding: 10px;
 		}
 		@include tablet{
+			padding: 0;
 			flex-direction: column;
 		}
+	}
+	&__container{
+		white-space: nowrap;
+		width: 100%;
+		font-size: 0;
+		position: absolute;
+		left: 0;
+		transition: left .6s;
 	}
 	&__images{
 		width: 52.8795%;
@@ -58,6 +73,11 @@
 		justify-content: center;
 		flex-direction: column;
 		align-self: flex-start;
+		position: relative;
+		&:hover .composition{
+			display: block;
+			opacity: 1;
+		}
 		@include phone{
 			position: relative;
 			bottom: 60px;
@@ -150,13 +170,47 @@
 }
 .str{
 	background: url(../img/svg/str-down.svg) no-repeat;
-	width: 6.1875rem;
-	height: 2.3rem;
+	width: 31px;
+	height: 20px;
 	cursor: pointer;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index:1;
 	&_left{
 		transform: rotate(-90deg);
+		right: 0;
 	}
 	&_right{
 		transform: rotate(90deg);
+		left: 0;
+	}
+}
+
+.composition{
+	position: absolute;
+	width: rem(250px);
+	opacity: 0;
+	display: none;
+	transition: opacity .7s;
+	background-color: #ffffff9c;
+	top: 0;
+	left: rem(90px);
+	color: #2f3234;
+	&__items{
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		padding: rem(20px);
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		margin-bottom: rem(18px);
+		&::last-child{
+			margin-bottom: 0px;
+		}
 	}
 }

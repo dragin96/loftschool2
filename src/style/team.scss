@@ -57,7 +57,7 @@
 		@include tablet{
 			margin-bottom: 0;
 		}
-		&-active{
+		&.is-active{
 			@include tablet{
 				margin-bottom: rem(7px);
 			}

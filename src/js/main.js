@@ -1,4 +1,57 @@
 $(document).ready(function(){
+		$('#fullpage').fullpage({
+			scrollingSpeed:600,
+			anchors:['1', '2', '3', '4', '5', '6', '7', '8'],
+			menu: '.nav-circle__items',
+			scrollBar:true
+		});
+
+	var sendMail = function(){
+		var obj={
+			name:$("#name").val(),
+			phone:$("#phone").val(),
+			street:$("#street").val(),
+			house:$("#house").val(),
+			housing:$("#housing").val(),
+			apartment:$("#apartment").val(),
+			floor:$("#floor").val(),
+			coment:$("#coment").val(),
+			pay:($("#pay1").is(':checked'))?"Потребуется сдача":"Оплата по карте",
+			dialing:($("#dialing").is(':checked'))?"Не звонить":"Позвонить"
+		};
+		for (key in obj){
+			if(obj[key]!=""){
+				flag=1;
+			}
+			else{
+				if(key=='housing'||key=='coment'){
+					flag=1;
+				}
+				else{
+					flag=0;
+					break;
+				}
+			}
+		}
+		if(flag){
+			$.ajax({
+				type: "POST",
+				url: "http://dragin.ru/sendMail.php",
+				data: {
+					method: "mail", 
+					input:obj
+				},
+				dataType: "json",
+				success: function(data) {
+					//alert();
+					addElement($(".delivery__modal"),"none");
+				}
+			})
+		}
+		if(!flag){
+			alert("заполните все поля");
+		}
+	}
 	var slider = function(container,slideNum){
 		var items=container.find(".courusel__wrap"),
 		activeSlide=container.find(".courusel__wrap_active"),
@@ -38,6 +91,8 @@ $(document).ready(function(){
 			container.show(200);
 		}
 	}
+
+
 	$('.str').on('click',function(e){
 		e.preventDefault();
 		var $this=$(this),
@@ -63,7 +118,6 @@ $(document).ready(function(){
 			}
 		}
 	})
-
 	$('.menu_burg__close').on('click',function(e){
 		e.preventDefault();
 		var element = $(".menu_burg");
@@ -79,7 +133,7 @@ $(document).ready(function(){
 		var element = $(".menu_burg");
 		addElement(element);
 	})
-	$(window).on('scroll',function(){
+	/*$(window).on('scroll',function(){
 		var element = $(".header");
 		if ($("html").scrollTop()) {
 			addElement(element,'header_active');
@@ -87,7 +141,7 @@ $(document).ready(function(){
 		else{
 			close(element,'header_active');
 		}
-	})
+	})*/
 	$(".accordeon__item").on('click',function(e){
 		e.preventDefault();
 		var $this = $(this),
@@ -108,7 +162,7 @@ $(document).ready(function(){
 		num=$this.closest('.review__item').eq(0).index(),
 		element=$($(".modal")[num]);
 		addElement(element,'modal_active');
-		console.log(num);
+		//console.log(num);
 	})
 	$('.modal__close').on('click',function(e){
 		e.preventDefault();
@@ -126,8 +180,16 @@ $(document).ready(function(){
 		var $this = $(this),
 		element=$(".nav-circle__href"),
 		num=$this.closest('.nav-circle__href').index();
-		console.log(num);
+		//console.log(num);
 		accordeon(element,num);
 	})
-	$('.wrapper').fullpage();
+	$("#send").on('click',function(e){
+		e.preventDefault();
+		sendMail();
+	})
+	$(".delivery__modal-button").on('click',function(e){
+		e.preventDefault();
+		close($(".delivery__modal"),"none");
+	})
+
 });

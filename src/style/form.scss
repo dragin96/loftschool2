@@ -24,6 +24,30 @@
 	background-repeat: no-repeat,no-repeat;
 	background-size: auto,cover;
 	position: relative;
+	&__modal{
+		width: fit-content;
+		height: fit-content;
+		position: absolute;
+		text-align: center;
+		display: flex;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 22px;
+		border-radius: 5px;
+		background-color: white;
+		margin: auto;
+		flex-direction: column;
+		justify-content: center;
+		box-shadow: 1px 0px 9px black;
+		&-button{
+			margin: auto;
+		}
+		&-text{
+			margin-bottom: 15px;
+		}
+	}
 	&__wrap{
 		width: 100%;
 		margin: auto;

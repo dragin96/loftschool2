@@ -39,7 +39,7 @@
 }
 
 .header{
-	position: fixed;
+	position: absolute;
 	color: white;
 	left: 0;
 	right: 0;
@@ -101,7 +101,7 @@
 		padding: rem(2px);
 		border-radius: rem(5px);
 		position:relative;
-		&.is-active::after{
+		&.active::after{
 			content:"";
 			display:block;
 			width: .8rem;

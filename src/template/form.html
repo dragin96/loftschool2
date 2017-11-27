@@ -1,4 +1,4 @@
-<section id="delivery" class="delivery">
+<section id="delivery" class="section delivery">
 	<div class="container">
 		<div class="delivery__wrap">			
 		<h2 class="delivery__title">Закажите доставку</h2>
@@ -52,12 +52,16 @@
 							<label for="dialing" class="delivery__label-dialing"></label>
 						</li>
 						<li class="delivery__input-block_radio">
-							<input type="submit" class="button" value="Заказать">
+							<input type="submit" id="send" class="button" value="Заказать">
 							<input type="reset" class="button-reset" value="Очистить">
 						</li>
 					</ul>
 				</div>
 			</form>
 		</div>
+	</div>
+	<div class="delivery__modal none">
+		<div class="delivery__modal-text">Сообщение отправлено</div>
+		<button class="button delivery__modal-button" id="form">Закрыть</button>
 	</div>
 </section> 
